@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CRUDS</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="crud" >
+  <div class="head">
+    <h2>crud</h2>
+    <P>PRODUCT MANAGEMENT SYSTEM </P>
+  </div>
+
+  
+  <div class="inputs">
+    <input placeholder="title" type="text" id="title">
+    <div class="price">
+       <input onkeyup="getTotel()" type="number" id="price" placeholder="price">
+       <input onkeyup="getTotel()" type="number" id="taxes" placeholder="taxes">
+       <input onkeyup="getTotel()" type="number" id="ads" placeholder="ads">
+       <input onkeyup="getTotel()" type="number" id="discount" placeholder="discount">
+       <small id="total">32132</small>
+    </div>
+    <input type="number" id="count" placeholder="count">
+    <input type="text" id="category" placeholder="category">
+    <button id="submit">Create</button>
+
+  </div>
+
+
+  
+  <div class="outputs"></div>
+    <div class="searchBlock">
+      <input onkeyup="searchData(this.value)" type="text" id="search" placeholder="Search">
+      <div class="btnSerch">
+       <button onclick="getSearchmood(this.id)" id="searchTitle"> Search By Title </button>
+       <button onclick="getSearchmood(this.id)" id="searchCategory"> Search By Category </button>
+      </div>
+    </div>
+    <div id="deleteAll">
+      
+    </div>
+    <table>
+      <tr>
+        <th>id</th>
+        <th>title</th>
+        <th>price</th>
+        <th>taxes</th>
+        <th>ads</th>
+        <th>discount</th>
+        <th>total</th>
+        <th>category</th>
+        <th>update</th>
+        <th>delete</th>
+      </tr>
+
+
+      <tbody id="tbody">
+     
+       
+      </tbody>
+    </table>
+
+</div>
+
+ <script src="main.js"></script>
+</body>
+</html>
